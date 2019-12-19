@@ -32,6 +32,7 @@ function show_results(response){
         search_el.className = 're-search-button';
         search_el.onclick = search_again(node_data['screen_name']);
         link_el.innerText = node_data['screen_name'];
+        link_el.target = 'blank';
         description_el.innerText = node_data['description'];
 
         result_div.appendChild(node_el);
