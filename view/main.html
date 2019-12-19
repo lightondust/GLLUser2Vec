@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GLL Twitter2Vec</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="graph.css"/>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+<div id="controller">
+    <input id="account_link" value="https://twitter.com/TwitterJP">
+    <br />
+    <br />
+    <button onclick="get_nodes('similarity')">関心持たれがち類似度</button>
+    <button onclick="get_nodes('mentioned')">関心持たれがち</button>
+    <button onclick="get_nodes('mention')">関心持ちがち</button>
+    <br />
+</div>
+
+<div id="result">
+</div>
+
+<script type="text/javascript" src="graph.js"></script>
+
+</body>
+
+</html>
