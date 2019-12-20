@@ -9,6 +9,7 @@ input {
 
 .node{
     max-width: 700px;
+    min-height: 50px;
     font-size: 12px;
     padding-left: 5px;
     padding-top: 5px;
@@ -20,6 +21,14 @@ input {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+}
+
+.profile-img{
+    float: left;
+    width : 48px;
+    height: 48px;
+    margin-right: 5px;
+    border-radius: 50%;
 }
 
 #controller button{

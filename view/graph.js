@@ -26,19 +26,26 @@ function show_results(response){
         let title_el = document.createElement('div');
         let description_el = document.createElement('div');
         let link_el = document.createElement('a');
+        let profile_img_el = document.createElement('img');
 
-        link_el.href = node_data['url'];
         search_el.innerText = 'search';
         search_el.className = 're-search-button';
         search_el.onclick = search_again(node_data['screen_name']);
+
         link_el.innerText = node_data['screen_name'];
         link_el.target = 'blank';
+        link_el.href = node_data['url'];
+
         description_el.innerText = node_data['description'];
 
+        profile_img_el.className = 'profile-img';
+        profile_img_el.src = node_data['profile_image_url_https'];
+
+        node_el.appendChild(profile_img_el);
         result_div.appendChild(node_el);
         node_el.appendChild(title_el);
         title_el.appendChild(link_el);
-        title_el.innerHTML += node_data['name'];
+        title_el.innerHTML += ':' + node_data['name'];
         title_el.appendChild(search_el);
         node_el.appendChild(description_el);
         node_el.className = 'node';
